@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div  style="height: 45px;"><input type="file" id="uFile" name="uFile"/>
+    <button id="doUpload" class="btn btn-success btn-sm"
+            style="margin-top: 10px;padding-bottom: 4px;border-bottom-width: 1px;border-top-width: 1px;padding-top: 4px;">
+        <i class="icon-cloud-upload"></i>&nbsp;&nbsp;&nbsp;上传任务
+    </button>
+</div>
+</body>
+
+<script src="../other/jquery-2.1.4/jquery.min.js"></script>
+<script src="ajaxfileupload_JS_File/ajaxfileupload.js"></script>
+<script>
+
+    $('#doUpload').click(function () {
+        $.ajaxFileUpload({
+            url: 'please write url ',
+            fileElementId: 'uFile',
+            dataType: 'text',
+            success: function (data, status) {
+
+            },
+            error: function (data, status) {
+                alert(data);
+            }
+        })
+    })
+
+
+</script>
+</html>
